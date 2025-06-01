@@ -1,0 +1,4 @@
+/mnt/c/Users/ander/CLionProjects/Test_Task_Alor_Brocker/cmake-build-debug/CMakeFiles/mongo_main.dir
+/mnt/c/Users/ander/CLionProjects/Test_Task_Alor_Brocker/cmake-build-debug/CMakeFiles/mongo_tests.dir
+/mnt/c/Users/ander/CLionProjects/Test_Task_Alor_Brocker/cmake-build-debug/CMakeFiles/edit_cache.dir
+/mnt/c/Users/ander/CLionProjects/Test_Task_Alor_Brocker/cmake-build-debug/CMakeFiles/rebuild_cache.dir

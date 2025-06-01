@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/mongo_main.dir/src/main.cpp.o CMakeFiles/mongo_main.dir/src/ResultWriter.cpp.o -o mongo_main  -Wl,-rpath,/usr/local/lib /usr/local/lib/libmongocxx.so.3.9.0 /usr/local/lib/libbsoncxx.so.3.9.0 -Wl,-rpath-link,/usr/local/lib 
