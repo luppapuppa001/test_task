@@ -142,33 +142,6 @@ mongo_tests/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mongo_tests.dir/build.make CMakeFiles/mongo_tests.dir/build
 .PHONY : mongo_tests/fast
 
-src/ResultWriter.o: src/ResultWriter.cpp.o
-.PHONY : src/ResultWriter.o
-
-# target to build an object file
-src/ResultWriter.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mongo_main.dir/build.make CMakeFiles/mongo_main.dir/src/ResultWriter.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mongo_tests.dir/build.make CMakeFiles/mongo_tests.dir/src/ResultWriter.cpp.o
-.PHONY : src/ResultWriter.cpp.o
-
-src/ResultWriter.i: src/ResultWriter.cpp.i
-.PHONY : src/ResultWriter.i
-
-# target to preprocess a source file
-src/ResultWriter.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mongo_main.dir/build.make CMakeFiles/mongo_main.dir/src/ResultWriter.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mongo_tests.dir/build.make CMakeFiles/mongo_tests.dir/src/ResultWriter.cpp.i
-.PHONY : src/ResultWriter.cpp.i
-
-src/ResultWriter.s: src/ResultWriter.cpp.s
-.PHONY : src/ResultWriter.s
-
-# target to generate assembly for a file
-src/ResultWriter.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mongo_main.dir/build.make CMakeFiles/mongo_main.dir/src/ResultWriter.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mongo_tests.dir/build.make CMakeFiles/mongo_tests.dir/src/ResultWriter.cpp.s
-.PHONY : src/ResultWriter.cpp.s
-
 src/Test_main.o: src/Test_main.cpp.o
 .PHONY : src/Test_main.o
 
@@ -251,9 +224,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... mongo_main"
 	@echo "... mongo_tests"
-	@echo "... src/ResultWriter.o"
-	@echo "... src/ResultWriter.i"
-	@echo "... src/ResultWriter.s"
 	@echo "... src/Test_main.o"
 	@echo "... src/Test_main.i"
 	@echo "... src/Test_main.s"

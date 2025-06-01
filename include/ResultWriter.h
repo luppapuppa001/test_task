@@ -27,48 +27,64 @@ concept Dictionary = KVRange<std::string, value_type, T>;
 
 using Connection = mongocxx::client&;
 
-inline std::vector<std::string> key_spliter(const std::string& key)
-{
-    std::vector<std::string> stringHolder;
-    stringHolder.push_back("");
-    for (auto it = key.begin(); it != key.end(); ++it)
-    {
-        if (*it == '.')
-            stringHolder.push_back("");
-        else
-            stringHolder.back() += *it;
-    }
-    return stringHolder;
-}
-
-template<typename Builder>
-void append_kvp_variant(Builder& builder, const std::string& key, const value_type& value) {
-    std::visit([&](auto&& arg) {
-        using T = std::decay_t<decltype(arg)>;
-        if constexpr (std::is_same_v<T, int64_t>) {
-            builder.append(bsoncxx::builder::basic::kvp(key, arg));
-        } else if constexpr (std::is_same_v<T, double>) {
-            builder.append(bsoncxx::builder::basic::kvp(key, arg));
-        } else if constexpr (std::is_same_v<T, std::string>) {
-            builder.append(bsoncxx::builder::basic::kvp(key, arg));
-        } else {
-            throw std::runtime_error("Unsupported type in variant");
-        }
-    }, value);
-}
-
 class ResultWriter
 {
     mongocxx::collection collection_;
     bsoncxx::oid document_id_;
 
+    /*
+     * Функция key_spliter разбивает строку с ключом по символу '.' на отдельные подстроки.
+     * Возвращает вектор строк, каждая из которых представляет собой уровень вложенности
+     * ключа. Например, "a.b.c" будет преобразовано в {"a", "b", "c"}.
+     * return std::vector<std::string>
+     */
+    static std::vector<std::string> key_spliter(const std::string& key)
+    {
+        std::vector<std::string> stringHolder;
+        stringHolder.push_back("");
+        for (auto it = key.begin(); it != key.end(); ++it)
+        {
+            if (*it == '.')
+                stringHolder.push_back("");
+            else
+                stringHolder.back() += *it;
+        }
+        return stringHolder;
+    }
+
+
+    /*
+     * Функция append_kvp_variant добавляет ключ-значение в BSON-документ builder. Значение
+     * передаётся как std::variant (value_type), может быть int64_t, double или std::string.
+     * Внутри используется std::visit для вызова соответствующего варианта и добавления в
+     * документ. Если тип значения не поддерживается, выдается исключение.
+     */
+    template<typename Builder>
+    static void append_kvp_variant(Builder& builder, const std::string& key, const value_type& value) {
+        std::visit([&](auto&& arg) {
+            using T = std::decay_t<decltype(arg)>;
+            if constexpr (std::is_same_v<T, int64_t>) {
+                builder.append(bsoncxx::builder::basic::kvp(key, arg));
+            } else if constexpr (std::is_same_v<T, double>) {
+                builder.append(bsoncxx::builder::basic::kvp(key, arg));
+            } else if constexpr (std::is_same_v<T, std::string>) {
+                builder.append(bsoncxx::builder::basic::kvp(key, arg));
+            } else {
+                throw std::runtime_error("Unsupported type in variant");
+            }
+        }, value);
+    }
+
+    friend void test_key_spliter();
+    friend void test_append_kvp_variant();
+
 public:
-    /**
-     * adssadas
-     * @tparam T adsa
-     * @param connection
-     * @param metadata
-     * @return
+
+    /*
+     * Конструктор ResultWriter создает документ в MongoDB. Принимает подключение к базе и словарь
+     * metadata, который сериализуется в BSON-документ. Ключи с точками разбиваются на вложенные поля.
+     * В созданный документ добавляется пустой массив "results", куда будут записываться результаты.
+     * Сохраняется _id вставленного документа для обновления.
      */
     template<Dictionary T>
     explicit ResultWriter(Connection connection, const T &metadata)
@@ -108,7 +124,6 @@ public:
             kvp("results", bsoncxx::builder::basic::array{})
         );
 
-        // Сохраняем документ в коллекцию
         collection_ = (connection)["test"]["results"];
         auto result = collection_.insert_one(doc.view());
         document_id_ = result->inserted_id().get_oid().value;
@@ -154,6 +169,5 @@ public:
                 ))
             )
         );
-        std::cout << "Appended result to document _id: " << document_id_.to_string() << std::endl;
     }
 };

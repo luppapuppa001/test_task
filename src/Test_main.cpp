@@ -7,10 +7,9 @@ int main()
     mongocxx::instance inst{};
     mongocxx::client connection{mongocxx::uri{}};
 
-
     test_key_spliter();
     test_append_kvp_variant();
-    test_result_writer_write(connection);
+    test_ResultWriter_constructor_and_write(connection);
     return 0;
 }
 

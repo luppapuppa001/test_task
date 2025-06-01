@@ -8,7 +8,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/mnt/c/Users/ander/CLionProjects/Test_Task_Alor_Brocker/src/ResultWriter.cpp" "CMakeFiles/mongo_tests.dir/src/ResultWriter.cpp.o" "gcc" "CMakeFiles/mongo_tests.dir/src/ResultWriter.cpp.o.d"
   "/mnt/c/Users/ander/CLionProjects/Test_Task_Alor_Brocker/src/Test_main.cpp" "CMakeFiles/mongo_tests.dir/src/Test_main.cpp.o" "gcc" "CMakeFiles/mongo_tests.dir/src/Test_main.cpp.o.d"
   "/mnt/c/Users/ander/CLionProjects/Test_Task_Alor_Brocker/tests/Test_functions.cpp" "CMakeFiles/mongo_tests.dir/tests/Test_functions.cpp.o" "gcc" "CMakeFiles/mongo_tests.dir/tests/Test_functions.cpp.o.d"
   )

@@ -69,24 +69,10 @@ include CMakeFiles/mongo_tests.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/mongo_tests.dir/flags.make
 
-CMakeFiles/mongo_tests.dir/src/ResultWriter.cpp.o: CMakeFiles/mongo_tests.dir/flags.make
-CMakeFiles/mongo_tests.dir/src/ResultWriter.cpp.o: /mnt/c/Users/ander/CLionProjects/Test_Task_Alor_Brocker/src/ResultWriter.cpp
-CMakeFiles/mongo_tests.dir/src/ResultWriter.cpp.o: CMakeFiles/mongo_tests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/ander/CLionProjects/Test_Task_Alor_Brocker/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/mongo_tests.dir/src/ResultWriter.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mongo_tests.dir/src/ResultWriter.cpp.o -MF CMakeFiles/mongo_tests.dir/src/ResultWriter.cpp.o.d -o CMakeFiles/mongo_tests.dir/src/ResultWriter.cpp.o -c /mnt/c/Users/ander/CLionProjects/Test_Task_Alor_Brocker/src/ResultWriter.cpp
-
-CMakeFiles/mongo_tests.dir/src/ResultWriter.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/mongo_tests.dir/src/ResultWriter.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/ander/CLionProjects/Test_Task_Alor_Brocker/src/ResultWriter.cpp > CMakeFiles/mongo_tests.dir/src/ResultWriter.cpp.i
-
-CMakeFiles/mongo_tests.dir/src/ResultWriter.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/mongo_tests.dir/src/ResultWriter.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/ander/CLionProjects/Test_Task_Alor_Brocker/src/ResultWriter.cpp -o CMakeFiles/mongo_tests.dir/src/ResultWriter.cpp.s
-
 CMakeFiles/mongo_tests.dir/src/Test_main.cpp.o: CMakeFiles/mongo_tests.dir/flags.make
 CMakeFiles/mongo_tests.dir/src/Test_main.cpp.o: /mnt/c/Users/ander/CLionProjects/Test_Task_Alor_Brocker/src/Test_main.cpp
 CMakeFiles/mongo_tests.dir/src/Test_main.cpp.o: CMakeFiles/mongo_tests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/ander/CLionProjects/Test_Task_Alor_Brocker/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/mongo_tests.dir/src/Test_main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/ander/CLionProjects/Test_Task_Alor_Brocker/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/mongo_tests.dir/src/Test_main.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mongo_tests.dir/src/Test_main.cpp.o -MF CMakeFiles/mongo_tests.dir/src/Test_main.cpp.o.d -o CMakeFiles/mongo_tests.dir/src/Test_main.cpp.o -c /mnt/c/Users/ander/CLionProjects/Test_Task_Alor_Brocker/src/Test_main.cpp
 
 CMakeFiles/mongo_tests.dir/src/Test_main.cpp.i: cmake_force
@@ -100,7 +86,7 @@ CMakeFiles/mongo_tests.dir/src/Test_main.cpp.s: cmake_force
 CMakeFiles/mongo_tests.dir/tests/Test_functions.cpp.o: CMakeFiles/mongo_tests.dir/flags.make
 CMakeFiles/mongo_tests.dir/tests/Test_functions.cpp.o: /mnt/c/Users/ander/CLionProjects/Test_Task_Alor_Brocker/tests/Test_functions.cpp
 CMakeFiles/mongo_tests.dir/tests/Test_functions.cpp.o: CMakeFiles/mongo_tests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/ander/CLionProjects/Test_Task_Alor_Brocker/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/mongo_tests.dir/tests/Test_functions.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/ander/CLionProjects/Test_Task_Alor_Brocker/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/mongo_tests.dir/tests/Test_functions.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mongo_tests.dir/tests/Test_functions.cpp.o -MF CMakeFiles/mongo_tests.dir/tests/Test_functions.cpp.o.d -o CMakeFiles/mongo_tests.dir/tests/Test_functions.cpp.o -c /mnt/c/Users/ander/CLionProjects/Test_Task_Alor_Brocker/tests/Test_functions.cpp
 
 CMakeFiles/mongo_tests.dir/tests/Test_functions.cpp.i: cmake_force
@@ -113,21 +99,19 @@ CMakeFiles/mongo_tests.dir/tests/Test_functions.cpp.s: cmake_force
 
 # Object files for target mongo_tests
 mongo_tests_OBJECTS = \
-"CMakeFiles/mongo_tests.dir/src/ResultWriter.cpp.o" \
 "CMakeFiles/mongo_tests.dir/src/Test_main.cpp.o" \
 "CMakeFiles/mongo_tests.dir/tests/Test_functions.cpp.o"
 
 # External object files for target mongo_tests
 mongo_tests_EXTERNAL_OBJECTS =
 
-mongo_tests: CMakeFiles/mongo_tests.dir/src/ResultWriter.cpp.o
 mongo_tests: CMakeFiles/mongo_tests.dir/src/Test_main.cpp.o
 mongo_tests: CMakeFiles/mongo_tests.dir/tests/Test_functions.cpp.o
 mongo_tests: CMakeFiles/mongo_tests.dir/build.make
 mongo_tests: /usr/local/lib/libmongocxx.so.3.9.0
 mongo_tests: /usr/local/lib/libbsoncxx.so.3.9.0
 mongo_tests: CMakeFiles/mongo_tests.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/mnt/c/Users/ander/CLionProjects/Test_Task_Alor_Brocker/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable mongo_tests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/mnt/c/Users/ander/CLionProjects/Test_Task_Alor_Brocker/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable mongo_tests"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/mongo_tests.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

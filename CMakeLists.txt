@@ -7,7 +7,6 @@ find_package(mongocxx REQUIRED)
 
 add_executable(mongo_main
         src/main.cpp
-        src/ResultWriter.cpp
         tests/Test_functions.h
 )
 
@@ -20,7 +19,6 @@ target_link_libraries(mongo_main PRIVATE
 )
 
 add_executable(mongo_tests
-        src/ResultWriter.cpp
         src/Test_main.cpp
         tests/Test_functions.cpp
 )

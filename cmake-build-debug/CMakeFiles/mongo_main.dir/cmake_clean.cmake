@@ -1,6 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/mongo_main.dir/src/ResultWriter.cpp.o"
-  "CMakeFiles/mongo_main.dir/src/ResultWriter.cpp.o.d"
   "CMakeFiles/mongo_main.dir/src/main.cpp.o"
   "CMakeFiles/mongo_main.dir/src/main.cpp.o.d"
   "mongo_main"
